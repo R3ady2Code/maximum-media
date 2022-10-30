@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Semibold.eot");
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url("../fonts/Gilroy-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy";
+  font-weight: 400;
+}
+
+button {
+  font-family: "Gilroy";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.banner {
+  position: relative;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 688px;
+}
+.banner__title {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 99.04px;
+  font-feature-settings: "pnum" on, "lnum" on, "liga" off, "kern" off;
+  max-width: 864px;
+  padding-top: 92px;
+}
+.banner__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  font-feature-settings: "liga" off, "kern" off;
+  max-width: 630px;
+  padding-top: 26px;
+  margin-bottom: 43px;
+}
+.banner__button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  background: #ffee00;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.banner__tickets {
+  position: absolute;
+  right: 0;
+  bottom: -6.5%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+}
+.banner__ticket {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__ticket-white {
+  position: relative;
+  width: 370.82px;
+  height: 84px;
+  background-color: #fff;
+  text-align: right;
+}
+.banner__ticket-black {
+  position: absolute;
+  left: 3px;
+  top: -30%;
+  transform: rotate(-15deg);
+  width: 202px;
+  height: 57px;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.banner__ticket-black::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1119px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.abstract {
+  position: absolute;
+}
+.abstract_right {
+  top: 30%;
+  left: 5.2%;
+}
+.abstract_left {
+  right: 2.5%;
+  top: 7.5%;
+}
+.abstract_your-story {
+  top: 3.5%;
+  left: -0.7%;
+}
+
+@media (max-width: 1140px) and (min-width: 769px) {
+  .banner__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .abstract_your-story {
+    left: 4%;
+  }
+  .container {
+    max-width: 900px;
+  }
+  .banner__tickets {
+    bottom: -30%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+  .banner__title {
+    padding-top: 125px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .banner__tickets {
+    bottom: -30%;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 400px;
+  }
+  .abstract_left, .abstract_right {
+    display: none;
+  }
+  .banner {
+    background-color: #ededed;
+    background-image: none;
+    min-height: 300vh;
+  }
+  .banner__title {
+    padding-top: 150px;
+  }
+}
+@media (max-width: 327px) {
+  .container {
+    width: 300px;
+  }
+  .banner__ticket-white {
+    width: 300px;
+  }
+  .banner__ticket-black {
+    top: -40%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

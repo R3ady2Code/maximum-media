@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d4d9dc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding-top: 30px;
+  max-width: 700px;
+}
+
+.toggle {
+  display: flex;
+  border: 1px rgb(146, 146, 146) solid;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  &__item {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &-right {
+      border-radius: 0 5px 5px 0;
+    }
+    &-left {
+      border-radius: 5px 0 0 5px;
+    }
+    &_active {
+      background-color: rgb(0, 127, 212);
+      color: #ffffff;
+    }
+  }
+}
+
+.flight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  row-gap: 12px;
+
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  &__price {
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(0, 127, 212);
+  }
+  &__item {
+    text-transform: uppercase;
+    span {
+      font-size: 12px;
+      color: #969696;
+      letter-spacing: 1px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .toggle {
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    &__item {
+      border-radius: 5px;
+      width: auto;
+    }
+  }
+
+  .flight {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    &__logo {
+      grid-column: 1/-1;
+    }
+    &__item {
+      &_empty {
+        display: none;
+      }
+    }
+  }
+}
